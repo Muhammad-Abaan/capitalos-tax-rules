@@ -1,0 +1,495 @@
+{
+ "id": "in-2026-27",
+ "country": "IN",
+ "year": "2026-27",
+ "label": "Tax year 2026-27",
+ "act": "Income-tax Act, 2025",
+ "version": 1,
+ "status": "provisional",
+ "publishedOn": "2026-10-22",
+ "from": "2026-04-01",
+ "to": "2027-03-31",
+ "sources": [
+  {
+   "id": "fa2026",
+   "title": "Finance Act, 2026 (Union Budget 2026-27)",
+   "url": "https://www.indiabudget.gov.in/"
+  },
+  {
+   "id": "act2025",
+   "title": "Income-tax Act, 2025",
+   "url": "https://incometaxindia.gov.in/"
+  }
+ ],
+ "changelog": [
+  "The Income-tax Act, 2025 replaces the 1961 Act from 1 April 2026: “previous year” and “assessment year” become one “tax year”, and sections are renumbered (labels here still show the 1961 numbers people know).",
+  "Rates and limits carried over from FY 2025-26; to be checked against the Finance Act, 2026 before this pack is marked official."
+ ],
+ "rules": {
+  "new.slabs": {
+   "label": "Slab rates",
+   "value": [
+    {
+     "upTo": 400000,
+     "rate": 0
+    },
+    {
+     "upTo": 800000,
+     "rate": 0.05
+    },
+    {
+     "upTo": 1200000,
+     "rate": 0.1
+    },
+    {
+     "upTo": 1600000,
+     "rate": 0.15
+    },
+    {
+     "upTo": 2000000,
+     "rate": 0.2
+    },
+    {
+     "upTo": 2400000,
+     "rate": 0.25
+    },
+    {
+     "upTo": null,
+     "rate": 0.3
+    }
+   ],
+   "unit": "brackets",
+   "group": "New regime",
+   "source": "fa2026",
+   "section": "115BAC"
+  },
+  "new.standardDeduction": {
+   "label": "Standard deduction on salary",
+   "value": 75000,
+   "unit": "money",
+   "group": "New regime",
+   "source": "fa2026",
+   "section": "16(ia)"
+  },
+  "new.rebate.maxIncome": {
+   "label": "Rebate: total income up to",
+   "value": 1200000,
+   "unit": "money",
+   "group": "New regime",
+   "source": "fa2026",
+   "section": "87A"
+  },
+  "new.rebate.max": {
+   "label": "Rebate: up to",
+   "value": 60000,
+   "unit": "money",
+   "group": "New regime",
+   "source": "fa2026",
+   "section": "87A",
+   "note": "Not available against tax on income at special rates (capital gains under 111A/112A, crypto). Marginal relief applies just above the limit."
+  },
+  "new.surcharge": {
+   "label": "Surcharge",
+   "value": [
+    {
+     "upTo": 5000000,
+     "rate": 0
+    },
+    {
+     "upTo": 10000000,
+     "rate": 0.1
+    },
+    {
+     "upTo": 20000000,
+     "rate": 0.15
+    },
+    {
+     "upTo": null,
+     "rate": 0.25
+    }
+   ],
+   "unit": "brackets",
+   "group": "New regime",
+   "source": "fa2026",
+   "note": "Highest surcharge is 25% in the new regime."
+  },
+  "new.employerNps.pct": {
+   "label": "Employer NPS deduction: share of basic + DA",
+   "value": 0.14,
+   "unit": "rate",
+   "group": "New regime",
+   "source": "fa2026",
+   "section": "80CCD(2)"
+  },
+  "old.slabs": {
+   "label": "Slab rates (below 60)",
+   "value": [
+    {
+     "upTo": 250000,
+     "rate": 0
+    },
+    {
+     "upTo": 500000,
+     "rate": 0.05
+    },
+    {
+     "upTo": 1000000,
+     "rate": 0.2
+    },
+    {
+     "upTo": null,
+     "rate": 0.3
+    }
+   ],
+   "unit": "brackets",
+   "group": "Old regime",
+   "source": "fa2026"
+  },
+  "old.slabs.senior": {
+   "label": "Slab rates (60 to 80)",
+   "value": [
+    {
+     "upTo": 300000,
+     "rate": 0
+    },
+    {
+     "upTo": 500000,
+     "rate": 0.05
+    },
+    {
+     "upTo": 1000000,
+     "rate": 0.2
+    },
+    {
+     "upTo": null,
+     "rate": 0.3
+    }
+   ],
+   "unit": "brackets",
+   "group": "Old regime",
+   "source": "fa2026"
+  },
+  "old.slabs.superSenior": {
+   "label": "Slab rates (80 and above)",
+   "value": [
+    {
+     "upTo": 500000,
+     "rate": 0
+    },
+    {
+     "upTo": 1000000,
+     "rate": 0.2
+    },
+    {
+     "upTo": null,
+     "rate": 0.3
+    }
+   ],
+   "unit": "brackets",
+   "group": "Old regime",
+   "source": "fa2026"
+  },
+  "old.standardDeduction": {
+   "label": "Standard deduction on salary",
+   "value": 50000,
+   "unit": "money",
+   "group": "Old regime",
+   "source": "act2025",
+   "section": "16(ia)"
+  },
+  "old.professionalTax.max": {
+   "label": "Professional tax deduction, up to",
+   "value": 2500,
+   "unit": "money",
+   "group": "Old regime",
+   "source": "act2025",
+   "section": "16(iii)"
+  },
+  "old.rebate.maxIncome": {
+   "label": "Rebate: total income up to",
+   "value": 500000,
+   "unit": "money",
+   "group": "Old regime",
+   "source": "act2025",
+   "section": "87A"
+  },
+  "old.rebate.max": {
+   "label": "Rebate: up to",
+   "value": 12500,
+   "unit": "money",
+   "group": "Old regime",
+   "source": "act2025",
+   "section": "87A"
+  },
+  "old.surcharge": {
+   "label": "Surcharge",
+   "value": [
+    {
+     "upTo": 5000000,
+     "rate": 0
+    },
+    {
+     "upTo": 10000000,
+     "rate": 0.1
+    },
+    {
+     "upTo": 20000000,
+     "rate": 0.15
+    },
+    {
+     "upTo": 50000000,
+     "rate": 0.25
+    },
+    {
+     "upTo": null,
+     "rate": 0.37
+    }
+   ],
+   "unit": "brackets",
+   "group": "Old regime",
+   "source": "fa2026"
+  },
+  "old.employerNps.pct": {
+   "label": "Employer NPS deduction: share of basic + DA",
+   "value": 0.1,
+   "unit": "rate",
+   "group": "Old regime",
+   "source": "act2025",
+   "section": "80CCD(2)"
+  },
+  "cess.rate": {
+   "label": "Health and education cess",
+   "value": 0.04,
+   "unit": "rate",
+   "group": "Both regimes",
+   "source": "fa2026",
+   "note": "On income tax plus surcharge."
+  },
+  "surcharge.specialCap": {
+   "label": "Surcharge cap on capital gains and dividends",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "Both regimes",
+   "source": "fa2026",
+   "note": "Surcharge on gains under 111A, 112 and 112A and on dividends is capped at 15%."
+  },
+  "cg.stcgEquity.rate": {
+   "label": "Short-term gains on listed shares and equity funds",
+   "value": 0.2,
+   "unit": "rate",
+   "group": "Capital gains",
+   "source": "act2025",
+   "section": "111A",
+   "note": "For sales from 23 July 2024."
+  },
+  "cg.ltcgEquity.rate": {
+   "label": "Long-term gains on listed shares and equity funds",
+   "value": 0.125,
+   "unit": "rate",
+   "group": "Capital gains",
+   "source": "act2025",
+   "section": "112A",
+   "note": "For sales from 23 July 2024; held over 12 months."
+  },
+  "cg.ltcgEquity.exemption": {
+   "label": "Long-term equity gains free each year",
+   "value": 125000,
+   "unit": "money",
+   "group": "Capital gains",
+   "source": "act2025",
+   "section": "112A"
+  },
+  "cg.ltcgOther.rate": {
+   "label": "Long-term gains on other assets",
+   "value": 0.125,
+   "unit": "rate",
+   "group": "Capital gains",
+   "source": "act2025",
+   "section": "112",
+   "note": "Without indexation. Land or buildings bought before 23 July 2024 may instead use 20% with indexation, whichever is lower (resident individuals)."
+  },
+  "cg.vda.rate": {
+   "label": "Gains on crypto and other virtual digital assets",
+   "value": 0.3,
+   "unit": "rate",
+   "group": "Capital gains",
+   "source": "act2025",
+   "section": "115BBH",
+   "note": "No deduction except cost; losses can’t be set off or carried forward."
+  },
+  "ded.80C.limit": {
+   "label": "PPF, ELSS, life insurance, EPF, home loan principal …",
+   "value": 150000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80C"
+  },
+  "ded.80CCD1B.limit": {
+   "label": "Your own extra NPS contribution",
+   "value": 50000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80CCD(1B)"
+  },
+  "ded.80D.self": {
+   "label": "Health insurance: you and family (below 60)",
+   "value": 25000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80D"
+  },
+  "ded.80D.selfSenior": {
+   "label": "Health insurance: you and family (60+)",
+   "value": 50000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80D"
+  },
+  "ded.80D.parents": {
+   "label": "Health insurance: parents (below 60)",
+   "value": 25000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80D"
+  },
+  "ded.80D.parentsSenior": {
+   "label": "Health insurance: parents (60+)",
+   "value": 50000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80D"
+  },
+  "ded.80TTA.limit": {
+   "label": "Savings account interest (below 60)",
+   "value": 10000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80TTA"
+  },
+  "ded.80TTB.limit": {
+   "label": "Interest on deposits (60+)",
+   "value": 50000,
+   "unit": "money",
+   "group": "Deductions (old regime)",
+   "source": "act2025",
+   "section": "80TTB"
+  },
+  "hp.standardDeduction": {
+   "label": "Standard deduction on rent",
+   "value": 0.3,
+   "unit": "rate",
+   "group": "House property",
+   "source": "act2025",
+   "section": "24(a)",
+   "note": "Of rent received less municipal taxes paid."
+  },
+  "hp.selfOccupiedInterest.max": {
+   "label": "Home loan interest, self-occupied home (old regime)",
+   "value": 200000,
+   "unit": "money",
+   "group": "House property",
+   "source": "act2025",
+   "section": "24(b)",
+   "note": "Not allowed in the new regime."
+  },
+  "hp.lossSetOff.max": {
+   "label": "House property loss set off against other income (old regime)",
+   "value": 200000,
+   "unit": "money",
+   "group": "House property",
+   "source": "act2025",
+   "section": "71(3A)",
+   "note": "In the new regime a loss from house property can’t be set off against other income."
+  },
+  "hra.metro": {
+   "label": "Share of basic + DA in a metro city",
+   "value": 0.5,
+   "unit": "rate",
+   "group": "HRA exemption",
+   "source": "act2025",
+   "section": "10(13A)",
+   "note": "Mumbai, Delhi, Kolkata and Chennai."
+  },
+  "hra.nonMetro": {
+   "label": "Share of basic + DA elsewhere",
+   "value": 0.4,
+   "unit": "rate",
+   "group": "HRA exemption",
+   "source": "act2025",
+   "section": "10(13A)"
+  },
+  "hra.rentOver": {
+   "label": "Rent paid above this share of basic + DA",
+   "value": 0.1,
+   "unit": "rate",
+   "group": "HRA exemption",
+   "source": "act2025",
+   "section": "10(13A)"
+  },
+  "due.advance1": {
+   "label": "Advance tax: 15% by",
+   "value": "2026-06-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "211"
+  },
+  "due.advance2": {
+   "label": "Advance tax: 45% by",
+   "value": "2026-09-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "211"
+  },
+  "due.advance3": {
+   "label": "Advance tax: 75% by",
+   "value": "2026-12-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "211"
+  },
+  "due.advance4": {
+   "label": "Advance tax: 100% by",
+   "value": "2027-03-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "211"
+  },
+  "due.return": {
+   "label": "Return due (no audit)",
+   "value": "2027-07-31",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "139(1)",
+   "note": "Extended in some years by CBDT notification."
+  },
+  "due.belated": {
+   "label": "Late or revised return by",
+   "value": "2027-12-31",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "139(4)"
+  },
+  "advance.threshold": {
+   "label": "Advance tax needed when tax after TDS is at least",
+   "value": 10000,
+   "unit": "money",
+   "group": "Due dates",
+   "source": "act2025",
+   "section": "208",
+   "note": "Residents 60+ with no business income don’t pay advance tax."
+  }
+ }
+}

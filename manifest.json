@@ -1,0 +1,17 @@
+{
+ "published": "2026-10-22T16:08:32.489Z",
+ "packs": [
+  {
+   "id": "in-2025-26",
+   "version": 1,
+   "file": "packs/in-2025-26.json",
+   "sha256": "7b35fb5142802b7d53fd17218395d7321d51cbdf59382ec849296910619a8c07"
+  },
+  {
+   "id": "in-2026-27",
+   "version": 1,
+   "file": "packs/in-2026-27.json",
+   "sha256": "4387ed58e5ba275ab55802f0603a9249028ca5dd26375cc74e11c17bd48788ae"
+  }
+ ]
+}
