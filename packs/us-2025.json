@@ -1,0 +1,1080 @@
+{
+ "id": "us-2025",
+ "country": "US",
+ "year": "2025",
+ "label": "Tax year 2025",
+ "act": "Internal Revenue Code (federal)",
+ "version": 1,
+ "status": "official",
+ "publishedOn": "2026-10-23",
+ "from": "2025-01-01",
+ "to": "2025-12-31",
+ "sources": [
+  {
+   "id": "rp2440",
+   "title": "Rev. Proc. 2024-40 (2025 inflation adjustments)",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-24-40.pdf"
+  },
+  {
+   "id": "irc",
+   "title": "Internal Revenue Code (26 U.S.C.), as amended by Public Law 119-21",
+   "url": "https://uscode.house.gov/browse/prelim@title26&edition=prelim"
+  },
+  {
+   "id": "ssa",
+   "title": "Social Security Administration: contribution and benefit base",
+   "url": "https://www.ssa.gov/oact/cola/cbb.html"
+  },
+  {
+   "id": "sch1a",
+   "title": "Schedule 1-A (Form 1040), Additional Deductions, 2025",
+   "url": "https://www.irs.gov/pub/irs-pdf/f1040s1a.pdf"
+  },
+  {
+   "id": "scha",
+   "title": "Instructions for Schedule A (Form 1040), 2025",
+   "url": "https://www.irs.gov/instructions/i1040sca"
+  },
+  {
+   "id": "obbba",
+   "title": "Rev. Proc. 2025-32, section 2 (Public Law 119-21 changes for 2025)",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
+  }
+ ],
+ "changelog": [
+  "First version: federal income tax for 2025, with the changes made by Public Law 119-21 (higher standard deduction and child tax credit; deductions for tips, overtime, car loan interest and seniors; higher state and local tax cap). Checked against Rev. Proc. 2024-40, Rev. Proc. 2025-32 section 2, Schedule 1-A and the Schedule A instructions."
+ ],
+ "rules": {
+  "brackets.single": {
+   "label": "Tax brackets: Single",
+   "value": [
+    {
+     "upTo": 11925,
+     "rate": 0.1
+    },
+    {
+     "upTo": 48475,
+     "rate": 0.12
+    },
+    {
+     "upTo": 103350,
+     "rate": 0.22
+    },
+    {
+     "upTo": 197300,
+     "rate": 0.24
+    },
+    {
+     "upTo": 250525,
+     "rate": 0.32
+    },
+    {
+     "upTo": 626350,
+     "rate": 0.35
+    },
+    {
+     "upTo": null,
+     "rate": 0.37
+    }
+   ],
+   "unit": "brackets",
+   "group": "Tax rates",
+   "source": "rp2440",
+   "section": "1(j)"
+  },
+  "brackets.mfj": {
+   "label": "Tax brackets: Married filing jointly (and surviving spouses)",
+   "value": [
+    {
+     "upTo": 23850,
+     "rate": 0.1
+    },
+    {
+     "upTo": 96950,
+     "rate": 0.12
+    },
+    {
+     "upTo": 206700,
+     "rate": 0.22
+    },
+    {
+     "upTo": 394600,
+     "rate": 0.24
+    },
+    {
+     "upTo": 501050,
+     "rate": 0.32
+    },
+    {
+     "upTo": 751600,
+     "rate": 0.35
+    },
+    {
+     "upTo": null,
+     "rate": 0.37
+    }
+   ],
+   "unit": "brackets",
+   "group": "Tax rates",
+   "source": "rp2440",
+   "section": "1(j)"
+  },
+  "brackets.hoh": {
+   "label": "Tax brackets: Head of household",
+   "value": [
+    {
+     "upTo": 17000,
+     "rate": 0.1
+    },
+    {
+     "upTo": 64850,
+     "rate": 0.12
+    },
+    {
+     "upTo": 103350,
+     "rate": 0.22
+    },
+    {
+     "upTo": 197300,
+     "rate": 0.24
+    },
+    {
+     "upTo": 250500,
+     "rate": 0.32
+    },
+    {
+     "upTo": 626350,
+     "rate": 0.35
+    },
+    {
+     "upTo": null,
+     "rate": 0.37
+    }
+   ],
+   "unit": "brackets",
+   "group": "Tax rates",
+   "source": "rp2440",
+   "section": "1(j)"
+  },
+  "brackets.mfs": {
+   "label": "Tax brackets: Married filing separately",
+   "value": [
+    {
+     "upTo": 11925,
+     "rate": 0.1
+    },
+    {
+     "upTo": 48475,
+     "rate": 0.12
+    },
+    {
+     "upTo": 103350,
+     "rate": 0.22
+    },
+    {
+     "upTo": 197300,
+     "rate": 0.24
+    },
+    {
+     "upTo": 250525,
+     "rate": 0.32
+    },
+    {
+     "upTo": 375800,
+     "rate": 0.35
+    },
+    {
+     "upTo": null,
+     "rate": 0.37
+    }
+   ],
+   "unit": "brackets",
+   "group": "Tax rates",
+   "source": "rp2440",
+   "section": "1(j)"
+  },
+  "cg.zero.single": {
+   "label": "0% rate on long-term gains up to (single)",
+   "value": 48350,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)",
+   "note": "Counted on taxable income, with gains stacked on top of ordinary income."
+  },
+  "cg.fifteen.single": {
+   "label": "15% rate up to (single); 20% above",
+   "value": 533400,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)"
+  },
+  "cg.zero.mfj": {
+   "label": "0% rate on long-term gains up to (joint)",
+   "value": 96700,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)",
+   "note": "Counted on taxable income, with gains stacked on top of ordinary income."
+  },
+  "cg.fifteen.mfj": {
+   "label": "15% rate up to (joint); 20% above",
+   "value": 600050,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)"
+  },
+  "cg.zero.hoh": {
+   "label": "0% rate on long-term gains up to (head of household)",
+   "value": 64750,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)",
+   "note": "Counted on taxable income, with gains stacked on top of ordinary income."
+  },
+  "cg.fifteen.hoh": {
+   "label": "15% rate up to (head of household); 20% above",
+   "value": 566700,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)"
+  },
+  "cg.zero.mfs": {
+   "label": "0% rate on long-term gains up to (married separately)",
+   "value": 48350,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)",
+   "note": "Counted on taxable income, with gains stacked on top of ordinary income."
+  },
+  "cg.fifteen.mfs": {
+   "label": "15% rate up to (married separately); 20% above",
+   "value": 300000,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "rp2440",
+   "section": "1(h)"
+  },
+  "capLoss.limit": {
+   "label": "Net capital loss deductible each year",
+   "value": 3000,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "irc",
+   "section": "1211(b)",
+   "note": "The rest carries forward."
+  },
+  "capLoss.limitMfs": {
+   "label": "Net capital loss deductible (married separately)",
+   "value": 1500,
+   "unit": "money",
+   "group": "Capital gains and dividends",
+   "source": "irc",
+   "section": "1211(b)"
+  },
+  "std.single": {
+   "label": "Standard deduction: Single",
+   "value": 15750,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "obbba",
+   "section": "63(c)"
+  },
+  "std.mfj": {
+   "label": "Standard deduction: Married filing jointly",
+   "value": 31500,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "obbba",
+   "section": "63(c)"
+  },
+  "std.hoh": {
+   "label": "Standard deduction: Head of household",
+   "value": 23625,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "obbba",
+   "section": "63(c)"
+  },
+  "std.mfs": {
+   "label": "Standard deduction: Married filing separately",
+   "value": 15750,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "obbba",
+   "section": "63(c)"
+  },
+  "std.additionalMarried": {
+   "label": "Extra for each person 65+ or blind (married)",
+   "value": 1600,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "rp2440",
+   "section": "63(f)"
+  },
+  "std.additionalUnmarried": {
+   "label": "Extra for 65+ or blind (unmarried)",
+   "value": 2000,
+   "unit": "money",
+   "group": "Standard deduction",
+   "source": "rp2440",
+   "section": "63(f)"
+  },
+  "salt.cap": {
+   "label": "State and local taxes: cap",
+   "value": 40000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.capMfs": {
+   "label": "State and local taxes: cap (married separately)",
+   "value": 20000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.threshold": {
+   "label": "Cap is reduced when income is over",
+   "value": 500000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.thresholdMfs": {
+   "label": "Cap is reduced when income is over (married separately)",
+   "value": 250000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.reduceRate": {
+   "label": "Reduction: share of income over the threshold",
+   "value": 0.3,
+   "unit": "rate",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.floor": {
+   "label": "Cap is never reduced below",
+   "value": 10000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "salt.floorMfs": {
+   "label": "Cap is never reduced below (married separately)",
+   "value": 5000,
+   "unit": "money",
+   "group": "Itemized deductions",
+   "source": "scha",
+   "section": "164(b)(7)"
+  },
+  "medical.floor": {
+   "label": "Medical expenses deductible above this share of AGI",
+   "value": 0.075,
+   "unit": "rate",
+   "group": "Itemized deductions",
+   "source": "irc",
+   "section": "213(a)"
+  },
+  "tips.max": {
+   "label": "Qualified tips, up to",
+   "value": 25000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "224",
+   "note": "Both itemizers and non-itemizers. Married couples must file jointly. Years 2025 to 2028."
+  },
+  "overtime.max": {
+   "label": "Qualified overtime premium, up to",
+   "value": 12500,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "225"
+  },
+  "overtime.maxMfj": {
+   "label": "Qualified overtime premium, up to (joint)",
+   "value": 25000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "225"
+  },
+  "tipsOvertime.phaseStart": {
+   "label": "Tips and overtime reduced when income is over",
+   "value": 150000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "224"
+  },
+  "tipsOvertime.phaseStartMfj": {
+   "label": "Tips and overtime reduced when income is over (joint)",
+   "value": 300000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "224"
+  },
+  "tipsOvertime.phaseStep": {
+   "label": "Reduced by this for each full $1,000 over",
+   "value": 100,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "224"
+  },
+  "car.max": {
+   "label": "Car loan interest (new US-assembled car), up to",
+   "value": 10000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "163(h)(4)"
+  },
+  "car.phaseStart": {
+   "label": "Car loan interest reduced when income is over",
+   "value": 100000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "163(h)(4)"
+  },
+  "car.phaseStartMfj": {
+   "label": "Car loan interest reduced when income is over (joint)",
+   "value": 200000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "163(h)(4)"
+  },
+  "car.phaseStep": {
+   "label": "Reduced by this for each $1,000 (or part) over",
+   "value": 200,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "163(h)(4)"
+  },
+  "senior.amount": {
+   "label": "Senior deduction for each person 65+",
+   "value": 6000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "151(d)(5)",
+   "note": "Married couples must file jointly. Years 2025 to 2028."
+  },
+  "senior.phaseStart": {
+   "label": "Senior deduction reduced when income is over",
+   "value": 75000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "151(d)(5)"
+  },
+  "senior.phaseStartMfj": {
+   "label": "Senior deduction reduced when income is over (joint)",
+   "value": 150000,
+   "unit": "money",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "151(d)(5)"
+  },
+  "senior.phaseRate": {
+   "label": "Reduced by this share of income over",
+   "value": 0.06,
+   "unit": "rate",
+   "group": "New deductions (Schedule 1-A)",
+   "source": "sch1a",
+   "section": "151(d)(5)"
+  },
+  "qbi.rate": {
+   "label": "Qualified business income deduction",
+   "value": 0.2,
+   "unit": "rate",
+   "group": "Business income",
+   "source": "irc",
+   "section": "199A"
+  },
+  "qbi.threshold": {
+   "label": "Simple 20% rule applies with taxable income up to",
+   "value": 197300,
+   "unit": "money",
+   "group": "Business income",
+   "source": "rp2440",
+   "section": "199A(e)(2)",
+   "note": "Above it, wage and property limits apply (Form 8995-A)."
+  },
+  "qbi.thresholdMfj": {
+   "label": "Simple 20% rule applies with taxable income up to (joint)",
+   "value": 394600,
+   "unit": "money",
+   "group": "Business income",
+   "source": "rp2440",
+   "section": "199A(e)(2)"
+  },
+  "qbi.minDeduction": {
+   "label": "Minimum deduction",
+   "value": 0,
+   "unit": "money",
+   "group": "Business income",
+   "source": "obbba",
+   "section": "199A(i)"
+  },
+  "qbi.minIncome": {
+   "label": "Minimum deduction needs qualified business income of at least",
+   "value": 0,
+   "unit": "money",
+   "group": "Business income",
+   "source": "obbba",
+   "section": "199A(i)"
+  },
+  "se.factor": {
+   "label": "Self-employment: share of net profit taxed",
+   "value": 0.9235,
+   "unit": "rate",
+   "group": "Business income",
+   "source": "irc",
+   "section": "1402(a)(12)"
+  },
+  "se.ssRate": {
+   "label": "Social Security part of self-employment tax",
+   "value": 0.124,
+   "unit": "rate",
+   "group": "Business income",
+   "source": "irc",
+   "section": "1401(a)"
+  },
+  "se.medicareRate": {
+   "label": "Medicare part of self-employment tax",
+   "value": 0.029,
+   "unit": "rate",
+   "group": "Business income",
+   "source": "irc",
+   "section": "1401(b)"
+  },
+  "se.wageBase": {
+   "label": "Social Security wage base",
+   "value": 176100,
+   "unit": "money",
+   "group": "Business income",
+   "source": "ssa",
+   "section": "230",
+   "note": "Wages and self-employment earnings above this pay no Social Security tax."
+  },
+  "se.minimum": {
+   "label": "No self-employment tax below net earnings of",
+   "value": 400,
+   "unit": "money",
+   "group": "Business income",
+   "source": "irc",
+   "section": "6017"
+  },
+  "medicare.addlRate": {
+   "label": "Additional Medicare tax",
+   "value": 0.009,
+   "unit": "rate",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "3101(b)(2)"
+  },
+  "niit.rate": {
+   "label": "Net investment income tax",
+   "value": 0.038,
+   "unit": "rate",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "1411"
+  },
+  "surtax.threshold.single": {
+   "label": "Additional Medicare and investment income tax start above (single)",
+   "value": 200000,
+   "unit": "money",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "1411(b)",
+   "note": "Not adjusted for inflation."
+  },
+  "surtax.threshold.mfj": {
+   "label": "Additional Medicare and investment income tax start above (mfj)",
+   "value": 250000,
+   "unit": "money",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "1411(b)",
+   "note": "Not adjusted for inflation."
+  },
+  "surtax.threshold.mfs": {
+   "label": "Additional Medicare and investment income tax start above (mfs)",
+   "value": 125000,
+   "unit": "money",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "1411(b)",
+   "note": "Not adjusted for inflation."
+  },
+  "surtax.threshold.hoh": {
+   "label": "Additional Medicare and investment income tax start above (hoh)",
+   "value": 200000,
+   "unit": "money",
+   "group": "Additional taxes",
+   "source": "irc",
+   "section": "1411(b)",
+   "note": "Not adjusted for inflation."
+  },
+  "studentLoan.max": {
+   "label": "Student loan interest, up to",
+   "value": 2500,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "irc",
+   "section": "221"
+  },
+  "studentLoan.phaseStart": {
+   "label": "Student loan interest phases out from",
+   "value": 85000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "rp2440",
+   "section": "221(b)(2)"
+  },
+  "studentLoan.phaseEnd": {
+   "label": "Student loan interest gone at",
+   "value": 100000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "rp2440",
+   "section": "221(b)(2)"
+  },
+  "studentLoan.phaseStartMfj": {
+   "label": "Student loan interest phases out from (joint)",
+   "value": 170000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "rp2440",
+   "section": "221(b)(2)"
+  },
+  "studentLoan.phaseEndMfj": {
+   "label": "Student loan interest gone at (joint)",
+   "value": 200000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "rp2440",
+   "section": "221(b)(2)"
+  },
+  "educator.max": {
+   "label": "Educator expenses, up to",
+   "value": 300,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "rp2440",
+   "section": "62(a)(2)(D)"
+  },
+  "ss.base1": {
+   "label": "Social Security benefits: first threshold",
+   "value": 25000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "irc",
+   "section": "86",
+   "note": "Up to 50% of benefits taxable above it. Not adjusted for inflation."
+  },
+  "ss.base1Mfj": {
+   "label": "Social Security benefits: first threshold (joint)",
+   "value": 32000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "irc",
+   "section": "86"
+  },
+  "ss.base2": {
+   "label": "Social Security benefits: second threshold",
+   "value": 34000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "irc",
+   "section": "86",
+   "note": "Up to 85% taxable above it."
+  },
+  "ss.base2Mfj": {
+   "label": "Social Security benefits: second threshold (joint)",
+   "value": 44000,
+   "unit": "money",
+   "group": "Adjustments to income",
+   "source": "irc",
+   "section": "86"
+  },
+  "ctc.perChild": {
+   "label": "Child tax credit per child under 17",
+   "value": 2200,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "obbba",
+   "section": "24(h)"
+  },
+  "ctc.refundable": {
+   "label": "Refundable part per child, up to",
+   "value": 1700,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "rp2440",
+   "section": "24(d)"
+  },
+  "ctc.other": {
+   "label": "Credit for other dependents",
+   "value": 500,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(h)(4)"
+  },
+  "ctc.phaseStart": {
+   "label": "Credits reduced when income is over",
+   "value": 200000,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(h)(3)",
+   "note": "Reduced by $50 for each $1,000 (or part) over. Not adjusted for inflation."
+  },
+  "ctc.phaseStartMfj": {
+   "label": "Credits reduced when income is over (joint)",
+   "value": 400000,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(h)(3)"
+  },
+  "ctc.phaseStep": {
+   "label": "Reduced by this for each $1,000 (or part) over",
+   "value": 50,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(b)(1)"
+  },
+  "ctc.earnedFloor": {
+   "label": "Refundable part: earned income above",
+   "value": 2500,
+   "unit": "money",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(h)(6)"
+  },
+  "ctc.refundRate": {
+   "label": "Refundable part: share of earned income above that",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "Child and family credits",
+   "source": "irc",
+   "section": "24(d)(1)(B)"
+  },
+  "eitc.earned.0": {
+   "label": "0 children: earned income for the full credit",
+   "value": 8490,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.max.0": {
+   "label": "0 children: maximum credit",
+   "value": 649,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStart.0": {
+   "label": "0 children: phase-out starts",
+   "value": 10620,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStartMfj.0": {
+   "label": "0 children: phase-out starts (joint)",
+   "value": 17730,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseRate.0": {
+   "label": "0 children: phase-out rate",
+   "value": 0.0765,
+   "unit": "rate",
+   "group": "Earned income credit",
+   "source": "irc",
+   "section": "32(b)(1)"
+  },
+  "eitc.earned.1": {
+   "label": "1 children: earned income for the full credit",
+   "value": 12730,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.max.1": {
+   "label": "1 children: maximum credit",
+   "value": 4328,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStart.1": {
+   "label": "1 children: phase-out starts",
+   "value": 23350,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStartMfj.1": {
+   "label": "1 children: phase-out starts (joint)",
+   "value": 30470,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseRate.1": {
+   "label": "1 children: phase-out rate",
+   "value": 0.1598,
+   "unit": "rate",
+   "group": "Earned income credit",
+   "source": "irc",
+   "section": "32(b)(1)"
+  },
+  "eitc.earned.2": {
+   "label": "2 children: earned income for the full credit",
+   "value": 17880,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.max.2": {
+   "label": "2 children: maximum credit",
+   "value": 7152,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStart.2": {
+   "label": "2 children: phase-out starts",
+   "value": 23350,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStartMfj.2": {
+   "label": "2 children: phase-out starts (joint)",
+   "value": 30470,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseRate.2": {
+   "label": "2 children: phase-out rate",
+   "value": 0.2106,
+   "unit": "rate",
+   "group": "Earned income credit",
+   "source": "irc",
+   "section": "32(b)(1)"
+  },
+  "eitc.earned.3": {
+   "label": "3+ children: earned income for the full credit",
+   "value": 17880,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.max.3": {
+   "label": "3+ children: maximum credit",
+   "value": 8046,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStart.3": {
+   "label": "3+ children: phase-out starts",
+   "value": 23350,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseStartMfj.3": {
+   "label": "3+ children: phase-out starts (joint)",
+   "value": 30470,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(b)"
+  },
+  "eitc.phaseRate.3": {
+   "label": "3+ children: phase-out rate",
+   "value": 0.2106,
+   "unit": "rate",
+   "group": "Earned income credit",
+   "source": "irc",
+   "section": "32(b)(1)"
+  },
+  "eitc.investmentLimit": {
+   "label": "No credit with investment income over",
+   "value": 11950,
+   "unit": "money",
+   "group": "Earned income credit",
+   "source": "rp2440",
+   "section": "32(i)"
+  },
+  "aotc.first": {
+   "label": "American opportunity: 100% of the first",
+   "value": 2000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(b)"
+  },
+  "aotc.second": {
+   "label": "then 25% of the next",
+   "value": 2000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(b)",
+   "note": "Up to $2,500 per student, for the first four years of college."
+  },
+  "aotc.refundable": {
+   "label": "American opportunity: refundable share",
+   "value": 0.4,
+   "unit": "rate",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(i)"
+  },
+  "llc.rate": {
+   "label": "Lifetime learning: share of expenses",
+   "value": 0.2,
+   "unit": "rate",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(c)"
+  },
+  "llc.expenses": {
+   "label": "Lifetime learning: expenses counted, up to",
+   "value": 10000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(c)"
+  },
+  "edu.phaseStart": {
+   "label": "Education credits phase out from",
+   "value": 80000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(d)",
+   "note": "Not adjusted for inflation. Married filing separately can’t claim them."
+  },
+  "edu.phaseEnd": {
+   "label": "Education credits gone at",
+   "value": 90000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(d)"
+  },
+  "edu.phaseStartMfj": {
+   "label": "Education credits phase out from (joint)",
+   "value": 160000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(d)"
+  },
+  "edu.phaseEndMfj": {
+   "label": "Education credits gone at (joint)",
+   "value": 180000,
+   "unit": "money",
+   "group": "Education credits",
+   "source": "irc",
+   "section": "25A(d)"
+  },
+  "due.estimated1": {
+   "label": "Estimated tax, payment 1, by",
+   "value": "2025-04-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6654(c)"
+  },
+  "due.estimated2": {
+   "label": "Estimated tax, payment 2, by",
+   "value": "2025-06-16",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6654(c)"
+  },
+  "due.estimated3": {
+   "label": "Estimated tax, payment 3, by",
+   "value": "2025-09-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6654(c)"
+  },
+  "due.estimated4": {
+   "label": "Estimated tax, payment 4, by",
+   "value": "2026-01-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6654(c)"
+  },
+  "due.return": {
+   "label": "Return due (Form 1040)",
+   "value": "2026-04-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6072(a)"
+  },
+  "due.extension": {
+   "label": "Extended due date (Form 4868)",
+   "value": "2026-10-15",
+   "unit": "date",
+   "group": "Due dates",
+   "source": "irc",
+   "section": "6081",
+   "note": "An extension gives more time to file, not to pay."
+  }
+ }
+}
