@@ -1,5 +1,5 @@
 {
- "published": "2026-10-22T20:10:11.606Z",
+ "published": "2026-10-22T20:47:00.116Z",
  "packs": [
   {
    "id": "in-2025-26",
@@ -15,15 +15,15 @@
   },
   {
    "id": "us-2025",
-   "version": 1,
+   "version": 2,
    "file": "packs/us-2025.json",
-   "sha256": "6eff0637e549b738bbfe0dde82b5f75e6d3125091d26914224c8446a2a460b41"
+   "sha256": "c62eb341cd4982c2bda8fa5267ee448828dff12a10bd03ac0925eef5a56004e1"
   },
   {
    "id": "us-2026",
-   "version": 1,
+   "version": 2,
    "file": "packs/us-2026.json",
-   "sha256": "ebaa23db93b401b22f139fec393d3eea5450b1624940fb28ee3c4096a14e3a2d"
+   "sha256": "d444bbc852ff002873ac733b1a8d152f64f614b110a98b4ac9e498a3b7a8dcc0"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "year": "2026",
  "label": "Tax year 2026",
  "act": "Internal Revenue Code (federal)",
- "version": 1,
+ "version": 2,
  "status": "official",
  "publishedOn": "2026-10-23",
  "from": "2026-01-01",
@@ -34,10 +34,26 @@
    "id": "obbba",
    "title": "Rev. Proc. 2025-32, section 2 (Public Law 119-21 changes for 2025)",
    "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
+  },
+  {
+   "id": "irsrates",
+   "title": "IRS quarterly interest rates on underpayments (news releases)",
+   "url": "https://www.irs.gov/payments/quarterly-interest-rates"
+  },
+  {
+   "id": "limits",
+   "title": "IRS: 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500",
+   "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+  },
+  {
+   "id": "hsa",
+   "title": "Rev. Proc. 2025-19 (2026 HSA limits)",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-19.pdf"
   }
  ],
  "changelog": [
-  "First version: federal income tax for 2026, checked against Rev. Proc. 2025-32 (brackets, standard deduction, capital gains, credits, business income thresholds) and the SSA wage base. The state and local tax cap follows the law’s 1% yearly increase."
+  "First version: federal income tax for 2026, checked against Rev. Proc. 2025-32 (brackets, standard deduction, capital gains, credits, business income thresholds) and the SSA wage base. The state and local tax cap follows the law’s 1% yearly increase.",
+  "Version 2: estimated tax safe harbors and the Form 2210 underpayment rates (6% from April 2026, 7% from July 2026; 2027 assumed 7%); 401(k), IRA and HSA contribution limits."
  ],
  "rules": {
   "brackets.single": {
@@ -1071,6 +1087,122 @@
    "source": "irc",
    "section": "6081",
    "note": "An extension gives more time to file, not to pay."
+  },
+  "est.currentShare": {
+   "label": "Safe harbor: share of this year’s tax",
+   "value": 0.9,
+   "unit": "rate",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(d)"
+  },
+  "est.priorShare": {
+   "label": "Safe harbor: share of last year’s tax",
+   "value": 1.0,
+   "unit": "rate",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(d)"
+  },
+  "est.priorShareHigh": {
+   "label": "Safe harbor: multiple of last year’s tax at higher incomes",
+   "value": 1.1,
+   "unit": "number",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(d)",
+   "note": "1.1 = 110%, when last year’s AGI was over the limit below."
+  },
+  "est.priorAgiHigh": {
+   "label": "Last year’s AGI above which 110% applies",
+   "value": 150000,
+   "unit": "money",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(d)"
+  },
+  "est.priorAgiHighMfs": {
+   "label": "Last year’s AGI above which 110% applies (married filing separately)",
+   "value": 75000,
+   "unit": "money",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(d)"
+  },
+  "est.minimumOwed": {
+   "label": "No penalty when tax owed after withholding is under",
+   "value": 1000,
+   "unit": "money",
+   "group": "Estimated tax and penalty",
+   "source": "irc",
+   "section": "6654(e)"
+  },
+  "penalty.rate.1": {
+   "label": "Underpayment rate from 2026-04-01",
+   "value": 0.06,
+   "unit": "rate",
+   "group": "Estimated tax and penalty",
+   "source": "irsrates",
+   "section": "6621(a)(2)"
+  },
+  "penalty.from.1": {
+   "label": "Underpayment rate period 1 starts",
+   "value": "2026-04-01",
+   "unit": "date",
+   "group": "Estimated tax and penalty",
+   "source": "irsrates",
+   "section": "6621(b)"
+  },
+  "penalty.rate.2": {
+   "label": "Underpayment rate from 2026-07-01",
+   "value": 0.07,
+   "unit": "rate",
+   "group": "Estimated tax and penalty",
+   "source": "irsrates",
+   "section": "6621(a)(2)",
+   "note": "7% for the third and fourth quarters of 2026. The rate for 2027 isn’t announced yet: 7% is assumed until it is."
+  },
+  "penalty.from.2": {
+   "label": "Underpayment rate period 2 starts",
+   "value": "2026-07-01",
+   "unit": "date",
+   "group": "Estimated tax and penalty",
+   "source": "irsrates",
+   "section": "6621(b)"
+  },
+  "limit.401k": {
+   "label": "401(k), 403(b) and TSP: employee contributions",
+   "value": 24500,
+   "unit": "money",
+   "group": "Retirement and health accounts",
+   "source": "limits",
+   "section": "402(g)",
+   "note": "Before catch-up contributions at age 50 or older."
+  },
+  "limit.ira": {
+   "label": "IRA contributions",
+   "value": 7500,
+   "unit": "money",
+   "group": "Retirement and health accounts",
+   "source": "limits",
+   "section": "219(b)",
+   "note": "Before the catch-up at age 50 or older. Deducting it can be limited when you have a workplace plan."
+  },
+  "limit.hsaSelf": {
+   "label": "HSA contributions, self-only coverage",
+   "value": 4400,
+   "unit": "money",
+   "group": "Retirement and health accounts",
+   "source": "hsa",
+   "section": "223(b)"
+  },
+  "limit.hsaFamily": {
+   "label": "HSA contributions, family coverage",
+   "value": 8750,
+   "unit": "money",
+   "group": "Retirement and health accounts",
+   "source": "hsa",
+   "section": "223(b)"
   }
  }
 }
