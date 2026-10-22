@@ -1,17 +1,17 @@
 {
- "published": "2026-10-22T16:24:03.499Z",
+ "published": "2026-10-22T16:56:52.924Z",
  "packs": [
   {
    "id": "in-2025-26",
-   "version": 2,
+   "version": 3,
    "file": "packs/in-2025-26.json",
-   "sha256": "1545b4f609df5699bb2f28b77530c07f14feeb7a5d03bb585bda5d7e31491cfd"
+   "sha256": "2c2fda78e721aca1f7f75250f5712e70a5890f6ee61912d08ccb6b48803a281d"
   },
   {
    "id": "in-2026-27",
-   "version": 2,
+   "version": 3,
    "file": "packs/in-2026-27.json",
-   "sha256": "fbfee1f61ce1122f3321ee626cbd84e64cefb8d152a5c01a6e77bb0800784e14"
+   "sha256": "ae4a037cb05b8b7325d1c42a0abfc06ce52e06b5a272178066bdaa59625ccf6f"
   }
  ]
 }

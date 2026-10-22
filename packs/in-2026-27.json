@@ -4,7 +4,7 @@
  "year": "2026-27",
  "label": "Tax year 2026-27",
  "act": "Income-tax Act, 2025",
- "version": 2,
+ "version": 3,
  "status": "provisional",
  "publishedOn": "2026-10-22",
  "from": "2026-04-01",
@@ -29,7 +29,8 @@
  "changelog": [
   "The Income-tax Act, 2025 replaces the 1961 Act from 1 April 2026: “previous year” and “assessment year” become one “tax year”, and sections are renumbered (labels here still show the 1961 numbers people know).",
   "Rates and limits carried over from FY 2025-26; to be checked against the Finance Act, 2026 before this pack is marked official.",
-  "Version 2: added interest for late payment (234A, 234B, 234C), the late filing fee (234F), the advance tax instalment shares and the limits for choosing the return form."
+  "Version 2: added interest for late payment (234A, 234B, 234C), the late filing fee (234F), the advance tax instalment shares and the limits for choosing the return form.",
+  "Version 3: ITR-1 and ITR-4 now allow two house properties (was one)."
  ],
  "rules": {
   "new.slabs": {
@@ -593,7 +594,7 @@
    "unit": "money",
    "group": "Return forms",
    "source": "cbdt-itr",
-   "note": "Residents only, with salary, one house property, other sources and small long-term equity gains."
+   "note": "Residents only, with salary, up to two house properties, other sources and small long-term equity gains."
   },
   "itr1.ltcgMax": {
    "label": "ITR-1: long-term equity gains (112A) up to",
@@ -616,6 +617,14 @@
    "group": "Return forms",
    "source": "cbdt-itr",
    "note": "Residents with presumptive business or professional income (44AD, 44ADA, 44AE)."
+  },
+  "itr1.maxHouses": {
+   "label": "ITR-1 and ITR-4: house properties allowed",
+   "value": 2,
+   "unit": "number",
+   "group": "Return forms",
+   "source": "cbdt-itr",
+   "note": "From AY 2026-27 (FY 2025-26), ITR-1 and ITR-4 allow up to two house properties."
   }
  }
 }
