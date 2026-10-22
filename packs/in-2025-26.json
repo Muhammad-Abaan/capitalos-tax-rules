@@ -4,7 +4,7 @@
  "year": "2025-26",
  "label": "FY 2025-26 (AY 2026-27)",
  "act": "Income-tax Act, 1961",
- "version": 1,
+ "version": 2,
  "status": "official",
  "publishedOn": "2026-10-22",
  "from": "2025-04-01",
@@ -19,11 +19,17 @@
    "id": "act1961",
    "title": "Income-tax Act, 1961, as amended",
    "url": "https://incometaxindia.gov.in/"
+  },
+  {
+   "id": "cbdt-itr",
+   "title": "Income tax return forms notified by CBDT",
+   "url": "https://www.incometax.gov.in/"
   }
  ],
  "changelog": [
   "New regime slabs widened: nil up to ₹4 lakh, 30% only above ₹24 lakh.",
-  "New regime rebate raised to ₹60,000, so no tax up to ₹12 lakh of total income (₹12.75 lakh with salary)."
+  "New regime rebate raised to ₹60,000, so no tax up to ₹12 lakh of total income (₹12.75 lakh with salary).",
+  "Version 2: added interest for late payment (234A, 234B, 234C), the late filing fee (234F), the advance tax instalment shares and the limits for choosing the return form."
  ],
  "rules": {
   "new.slabs": {
@@ -490,6 +496,126 @@
    "source": "act1961",
    "section": "208",
    "note": "Residents 60+ with no business income don’t pay advance tax."
+  },
+  "advance.share1": {
+   "label": "Advance tax: share due by instalment 1",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "Due dates",
+   "source": "act1961",
+   "section": "211"
+  },
+  "advance.share2": {
+   "label": "Advance tax: share due by instalment 2",
+   "value": 0.45,
+   "unit": "rate",
+   "group": "Due dates",
+   "source": "act1961",
+   "section": "211"
+  },
+  "advance.share3": {
+   "label": "Advance tax: share due by instalment 3",
+   "value": 0.75,
+   "unit": "rate",
+   "group": "Due dates",
+   "source": "act1961",
+   "section": "211"
+  },
+  "advance.share4": {
+   "label": "Advance tax: share due by instalment 4",
+   "value": 1,
+   "unit": "rate",
+   "group": "Due dates",
+   "source": "act1961",
+   "section": "211"
+  },
+  "interest.rate": {
+   "label": "Interest on tax paid late, per month or part of a month",
+   "value": 0.01,
+   "unit": "rate",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234A",
+   "note": "Simple interest. 234A: return filed after the due date; 234B: advance tax under 90%; 234C: an instalment paid short."
+  },
+  "interest.advanceShare": {
+   "label": "Advance tax needed to avoid 234B interest",
+   "value": 0.9,
+   "unit": "rate",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234B",
+   "note": "Share of the assessed tax (tax after TDS)."
+  },
+  "interest.c1Min": {
+   "label": "No 234C interest if this much paid by the first date",
+   "value": 0.12,
+   "unit": "rate",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234C"
+  },
+  "interest.c2Min": {
+   "label": "No 234C interest if this much paid by the second date",
+   "value": 0.36,
+   "unit": "rate",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234C"
+  },
+  "fee.late": {
+   "label": "Late filing fee",
+   "value": 5000,
+   "unit": "money",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234F"
+  },
+  "fee.lateSmall": {
+   "label": "Late filing fee when total income is up to the limit below",
+   "value": 1000,
+   "unit": "money",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234F"
+  },
+  "fee.lateSmallIncome": {
+   "label": "Lower late fee: total income up to",
+   "value": 500000,
+   "unit": "money",
+   "group": "Interest and fees",
+   "source": "act1961",
+   "section": "234F"
+  },
+  "itr1.maxIncome": {
+   "label": "ITR-1: total income up to",
+   "value": 5000000,
+   "unit": "money",
+   "group": "Return forms",
+   "source": "cbdt-itr",
+   "note": "Residents only, with salary, one house property, other sources and small long-term equity gains."
+  },
+  "itr1.ltcgMax": {
+   "label": "ITR-1: long-term equity gains (112A) up to",
+   "value": 125000,
+   "unit": "money",
+   "group": "Return forms",
+   "source": "cbdt-itr"
+  },
+  "itr1.agriMax": {
+   "label": "ITR-1 and ITR-4: agricultural income up to",
+   "value": 5000,
+   "unit": "money",
+   "group": "Return forms",
+   "source": "cbdt-itr"
+  },
+  "itr4.maxIncome": {
+   "label": "ITR-4: total income up to",
+   "value": 5000000,
+   "unit": "money",
+   "group": "Return forms",
+   "source": "cbdt-itr",
+   "note": "Residents with presumptive business or professional income (44AD, 44ADA, 44AE)."
   }
  }
 }
