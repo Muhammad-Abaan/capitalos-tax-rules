@@ -1,29 +1,29 @@
 {
- "published": "2026-10-22T20:47:00.116Z",
+ "published": "2026-10-22T21:15:09.904Z",
  "packs": [
   {
    "id": "in-2025-26",
-   "version": 3,
+   "version": 4,
    "file": "packs/in-2025-26.json",
-   "sha256": "2c2fda78e721aca1f7f75250f5712e70a5890f6ee61912d08ccb6b48803a281d"
+   "sha256": "5a55d06abc22bb382e5f3de65a531b90120bb97f339cc8949d63df230ca06f2b"
   },
   {
    "id": "in-2026-27",
-   "version": 3,
+   "version": 4,
    "file": "packs/in-2026-27.json",
-   "sha256": "ae4a037cb05b8b7325d1c42a0abfc06ce52e06b5a272178066bdaa59625ccf6f"
+   "sha256": "f42e46c920c72e05ab692563f4b2aee9b698aa218d5a46c11ee022184c9b00af"
   },
   {
    "id": "us-2025",
-   "version": 2,
+   "version": 3,
    "file": "packs/us-2025.json",
-   "sha256": "c62eb341cd4982c2bda8fa5267ee448828dff12a10bd03ac0925eef5a56004e1"
+   "sha256": "f208fa87743089ff00d4f0cc9443b3976e2fd713c20456912178579164c26bfe"
   },
   {
    "id": "us-2026",
-   "version": 2,
+   "version": 3,
    "file": "packs/us-2026.json",
-   "sha256": "d444bbc852ff002873ac733b1a8d152f64f614b110a98b4ac9e498a3b7a8dcc0"
+   "sha256": "1086020db450b86041e99b806a72955ca33b315c94451f500f510f191c9aa16f"
   }
  ]
 }

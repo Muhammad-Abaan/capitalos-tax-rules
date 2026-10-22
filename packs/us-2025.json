@@ -4,7 +4,7 @@
  "year": "2025",
  "label": "Tax year 2025",
  "act": "Internal Revenue Code (federal)",
- "version": 2,
+ "version": 3,
  "status": "official",
  "publishedOn": "2026-10-23",
  "from": "2025-01-01",
@@ -54,11 +54,27 @@
    "id": "hsa",
    "title": "Rev. Proc. 2024-25 (2025 HSA limits)",
    "url": "https://www.irs.gov/pub/irs-drop/rp-24-25.pdf"
+  },
+  {
+   "id": "dtaa",
+   "title": "India–United States income tax treaty (1989), Articles 4, 10, 11, 12 and 25",
+   "url": "https://www.irs.gov/businesses/international-businesses/india-tax-treaty-documents"
+  },
+  {
+   "id": "fincen",
+   "title": "FinCEN: Report of Foreign Bank and Financial Accounts (FBAR)",
+   "url": "https://www.fincen.gov/report-foreign-bank-and-financial-accounts"
+  },
+  {
+   "id": "fatca",
+   "title": "IRS: Comparison of Form 8938 and FBAR requirements",
+   "url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
   }
  ],
  "changelog": [
   "First version: federal income tax for 2025, with the changes made by Public Law 119-21 (higher standard deduction and child tax credit; deductions for tips, overtime, car loan interest and seniors; higher state and local tax cap). Checked against Rev. Proc. 2024-40, Rev. Proc. 2025-32 section 2, Schedule 1-A and the Schedule A instructions.",
-  "Version 2: estimated tax safe harbors and the Form 2210 underpayment rates (7% through March 2026, 6% from April 2026); 401(k), IRA and HSA contribution limits."
+  "Version 2: estimated tax safe harbors and the Form 2210 underpayment rates (7% through March 2026, 6% from April 2026); 401(k), IRA and HSA contribution limits.",
+  "Version 3: living or earning abroad (foreign earned income exclusion $130,000, foreign tax credit, FBAR and Form 8938 thresholds, substantial presence test) and India–US treaty rates."
  ],
  "rules": {
   "brackets.single": {
@@ -1207,6 +1223,165 @@
    "group": "Retirement and health accounts",
    "source": "hsa",
    "section": "223(b)"
+  },
+  "feie.max": {
+   "label": "Foreign earned income exclusion, per person",
+   "value": 130000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "rp2440",
+   "section": "911(b)(2)(D)",
+   "note": "For a full qualifying year (bona fide residence, or 330 full days abroad in 12 months); less for part of a year."
+  },
+  "ftc.simpleLimit": {
+   "label": "Foreign tax credit without Form 1116, up to",
+   "value": 300,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "irc",
+   "section": "904(j)",
+   "note": "Only passive income (interest, dividends) reported on a payee statement."
+  },
+  "ftc.simpleLimitMfj": {
+   "label": "Foreign tax credit without Form 1116, up to (married filing jointly)",
+   "value": 600,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "irc",
+   "section": "904(j)"
+  },
+  "fbar.threshold": {
+   "label": "FBAR: report foreign accounts when their total is over",
+   "value": 10000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fincen",
+   "section": "31 CFR 1010.350",
+   "note": "The highest total at any time in the year, across all foreign financial accounts."
+  },
+  "fatca.us.single.end": {
+   "label": "Form 8938, living in the US: total on December 31 over",
+   "value": 50000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.us.single.any": {
+   "label": "Form 8938, living in the US: total at any time over",
+   "value": 75000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.us.mfj.end": {
+   "label": "Form 8938, living in the US, married filing jointly: December 31 over",
+   "value": 100000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.us.mfj.any": {
+   "label": "Form 8938, living in the US, married filing jointly: any time over",
+   "value": 150000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.abroad.single.end": {
+   "label": "Form 8938, living abroad: total on December 31 over",
+   "value": 200000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.abroad.single.any": {
+   "label": "Form 8938, living abroad: total at any time over",
+   "value": 300000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.abroad.mfj.end": {
+   "label": "Form 8938, living abroad, married filing jointly: December 31 over",
+   "value": 400000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "fatca.abroad.mfj.any": {
+   "label": "Form 8938, living abroad, married filing jointly: any time over",
+   "value": 600000,
+   "unit": "money",
+   "group": "Living or earning abroad",
+   "source": "fatca",
+   "section": "6038D"
+  },
+  "spt.total": {
+   "label": "Substantial presence test: weighted days at least",
+   "value": 183,
+   "unit": "number",
+   "group": "Living or earning abroad",
+   "source": "irc",
+   "section": "7701(b)(3)",
+   "note": "Days this year + a third of last year’s + a sixth of the year before."
+  },
+  "spt.minCurrent": {
+   "label": "Substantial presence test: days this year at least",
+   "value": 31,
+   "unit": "number",
+   "group": "Living or earning abroad",
+   "source": "irc",
+   "section": "7701(b)(3)"
+  },
+  "treaty.in.dividend": {
+   "label": "Treaty rate on dividends",
+   "value": 0.25,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 10",
+   "note": "15% when the owner is a company holding at least 10% of the voting stock."
+  },
+  "treaty.in.dividendCompany": {
+   "label": "Treaty rate on dividends to a company with 10% or more",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 10"
+  },
+  "treaty.in.interest": {
+   "label": "Treaty rate on interest",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 11",
+   "note": "10% when a bank or similar institution receives it."
+  },
+  "treaty.in.interestBank": {
+   "label": "Treaty rate on interest received by a bank",
+   "value": 0.1,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 11"
+  },
+  "treaty.in.royalty": {
+   "label": "Treaty rate on royalties and fees for included services",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 12",
+   "note": "10% for the use of industrial, commercial or scientific equipment."
   }
  }
 }

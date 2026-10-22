@@ -4,7 +4,7 @@
  "year": "2025-26",
  "label": "FY 2025-26 (AY 2026-27)",
  "act": "Income-tax Act, 1961",
- "version": 3,
+ "version": 4,
  "status": "official",
  "publishedOn": "2026-10-22",
  "from": "2025-04-01",
@@ -24,13 +24,24 @@
    "id": "cbdt-itr",
    "title": "Income tax return forms notified by CBDT",
    "url": "https://www.incometax.gov.in/"
+  },
+  {
+   "id": "dtaa",
+   "title": "India–United States income tax treaty (1989), Articles 4, 10, 11, 12 and 25",
+   "url": "https://www.irs.gov/businesses/international-businesses/india-tax-treaty-documents"
+  },
+  {
+   "id": "bma",
+   "title": "Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act, 2015, as amended by the Finance (No. 2) Act, 2024",
+   "url": "https://incometaxindia.gov.in/Pages/acts/black-money-act.aspx"
   }
  ],
  "changelog": [
   "New regime slabs widened: nil up to ₹4 lakh, 30% only above ₹24 lakh.",
   "New regime rebate raised to ₹60,000, so no tax up to ₹12 lakh of total income (₹12.75 lakh with salary).",
   "Version 2: added interest for late payment (234A, 234B, 234C), the late filing fee (234F), the advance tax instalment shares and the limits for choosing the return form.",
-  "Version 3: ITR-1 and ITR-4 now allow two house properties (was one)."
+  "Version 3: ITR-1 and ITR-4 now allow two house properties (was one).",
+  "Version 4: residence rules (resident, not ordinarily resident), Schedule FA penalty and its ₹20 lakh exemption, and India–US treaty rates."
  ],
  "rules": {
   "new.slabs": {
@@ -625,6 +636,124 @@
    "group": "Return forms",
    "source": "cbdt-itr",
    "note": "From AY 2026-27 (FY 2025-26), ITR-1 and ITR-4 allow up to two house properties."
+  },
+  "residency.days": {
+   "label": "Resident: days in India in the year at least",
+   "value": 182,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(1)(a)"
+  },
+  "residency.daysShort": {
+   "label": "Resident: or days in the year at least (with the four-year test)",
+   "value": 60,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(1)(c)",
+   "note": "Becomes 182 for Indian citizens leaving for work abroad and for citizens or persons of Indian origin visiting; 120 for visitors whose Indian income is over the limit below."
+  },
+  "residency.days4Years": {
+   "label": "Resident: days in the four years before, at least",
+   "value": 365,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(1)(c)"
+  },
+  "residency.daysVisitorHigh": {
+   "label": "Visiting citizen or PIO with high Indian income: days at least",
+   "value": 120,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(1), Explanation 1(b)"
+  },
+  "residency.incomeLimit": {
+   "label": "Indian income above which the 120-day and deemed-resident rules apply",
+   "value": 1500000,
+   "unit": "money",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(1A)",
+   "note": "Income other than from foreign sources."
+  },
+  "rnor.nrYears": {
+   "label": "Not ordinarily resident: non-resident in at least this many of the 10 years before",
+   "value": 9,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(6)(a)"
+  },
+  "rnor.days7Years": {
+   "label": "Not ordinarily resident: or days in India in the 7 years before at most",
+   "value": 729,
+   "unit": "number",
+   "group": "Residence and foreign income",
+   "source": "act1961",
+   "section": "6(6)(a)"
+  },
+  "fa.penalty": {
+   "label": "Penalty for leaving foreign assets or income out of Schedule FA",
+   "value": 1000000,
+   "unit": "money",
+   "group": "Residence and foreign income",
+   "source": "bma",
+   "section": "Black Money Act, s. 42–43"
+  },
+  "fa.penaltyExemptUpTo": {
+   "label": "No penalty when foreign assets other than property total at most",
+   "value": 2000000,
+   "unit": "money",
+   "group": "Residence and foreign income",
+   "source": "bma",
+   "section": "Black Money Act, s. 42–43 proviso",
+   "note": "Schedule FA must still be filled in."
+  },
+  "treaty.us.dividend": {
+   "label": "Treaty rate on dividends",
+   "value": 0.25,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 10",
+   "note": "15% when the owner is a company holding at least 10% of the voting stock."
+  },
+  "treaty.us.dividendCompany": {
+   "label": "Treaty rate on dividends to a company with 10% or more",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 10"
+  },
+  "treaty.us.interest": {
+   "label": "Treaty rate on interest",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 11",
+   "note": "10% when a bank or similar institution receives it."
+  },
+  "treaty.us.interestBank": {
+   "label": "Treaty rate on interest received by a bank",
+   "value": 0.1,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 11"
+  },
+  "treaty.us.royalty": {
+   "label": "Treaty rate on royalties and fees for included services",
+   "value": 0.15,
+   "unit": "rate",
+   "group": "India–US treaty",
+   "source": "dtaa",
+   "section": "Article 12",
+   "note": "10% for the use of industrial, commercial or scientific equipment."
   }
  }
 }
